@@ -1,6 +1,7 @@
 package malicedev.gateworks;
 
-import malicedev.gateworks.cc.CCPlugin;
+//import malicedev.gateworks.cc.CCPlugin;
+import malicedev.gateworks.recipes.workbench.WorkbenchRecipes;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,15 +32,10 @@ public class Main implements ModInitializer, RecipeEntrypoint, GameStartEntrypoi
 		LOGGER.info("GateWorks initialized.");
 		ModBlocks.init();
 
-		try {
-			Class.forName("dan200.computercraft.api.ComputerCraftAPI");
-			registerCCPlugin();
-		} catch (ClassNotFoundException ignored){}
-
 	}
 
 	@Override
-	public void onRecipesReady() {}
+	public void onRecipesReady() {WorkbenchRecipes.init();}
 
 	@Override
 	public void initNamespaces() {}
@@ -50,8 +46,5 @@ public class Main implements ModInitializer, RecipeEntrypoint, GameStartEntrypoi
 
 	@Override
 	public void afterGameStart() {}
-
-	private void registerCCPlugin() {
-		CCPlugin.register();
-	}
+	
 }

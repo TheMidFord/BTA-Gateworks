@@ -49,10 +49,9 @@ dependencies {
 	implementation(libs.loader)
 	// If you do not need Halplibe you can comment out or delete this line.
 	implementation(project.files("bypass/cc.jar"))
-	implementation(project.files("bypass/halplibe-5.4.0.jar"))
-	//implementation(libs.halplibe)
-    //implementation(libs.modMenu)
-	implementation(project.files("bypass/legacy-lwjgl3-bta-1.0.6.jar"))
+	implementation(libs.halplibe)
+    implementation(libs.modMenu)
+	implementation(libs.legacyLwjgl)
 	implementation(project.files("bypass/stargate-1.0.0.jar"))
 
 	implementation(libs.slf4jApi)

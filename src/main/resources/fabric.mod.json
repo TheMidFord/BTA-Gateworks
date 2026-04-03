@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "gateworks",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This mod aims to help new BTA modders.",
+	"name": "GateWorks",
+	"description": "Stargate Additions!",
 	"authors": [
-		"Turnip Labs"
+		"The_Midford"
 	],
 	"contact": {
 		"homepage": "",
@@ -16,20 +16,23 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"turniplabs.examplemod.ExampleMod"
+          "malicedev.gateworks.Main"
 		],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+          "malicedev.gateworks.Main"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+          "malicedev.gateworks.Main"
+		],
+		"initModels": [
+			"malicedev.gateworks.ModModels"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+          "malicedev.gateworks.Main"
 		]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"gateworks.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",

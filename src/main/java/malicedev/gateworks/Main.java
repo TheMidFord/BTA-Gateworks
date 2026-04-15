@@ -46,5 +46,5 @@ public class Main implements ModInitializer, RecipeEntrypoint, GameStartEntrypoi
 
 	@Override
 	public void afterGameStart() {}
-	
+
 }

@@ -18,17 +18,8 @@
 		"main": [
           "malicedev.gateworks.Main"
 		],
-		"beforeGameStart": [
-          "malicedev.gateworks.Main"
-		],
-		"afterGameStart": [
-          "malicedev.gateworks.Main"
-		],
-		"initModels": [
-			"malicedev.gateworks.ModModels"
-		],
-		"recipesReady": [
-          "malicedev.gateworks.Main"
+		"client": [
+          "malicedev.gateworks.ModClient"
 		]
 	},
 	"mixins": [

@@ -1,2 +1,4 @@
 tile.gateworks.headless_dhd.name = Headless Dial Home Device
 tile.gateworks.headless_dhd.desc = Humans need not apply.
+tile.gateworks.meteoric_naquadah_ore.name =Meteoric Naquadah Ore
+tile.gateworks.meteoric_naquadah_ore.desc = A rare mineral that seems to have rained from the sky in the past. [Signal Industries has to be installed for this to spawn.]

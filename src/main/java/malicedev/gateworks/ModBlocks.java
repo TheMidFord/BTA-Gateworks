@@ -20,6 +20,7 @@ public class ModBlocks {
 	private ModBlocks() {}
 
 	public static Block<?> HeadlessDHD;
+	public static Block<?> OreNaquadahMeteoric;
 
 	public static void init(){
 
@@ -31,5 +32,15 @@ public class ModBlocks {
 			.setTileEntity(TileEntityHeadlessDHD::new)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
 			.build("headless_dhd","headless_dhd",blockId++,(block) -> new BlockLogicHeadlessDHD(block, Materials.METAL));
+
+		OreNaquadahMeteoric = new BlockBuilder(MOD_ID)
+			.setBlockSound(BlockSounds.STONE)
+			.setHardness(3)
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
+			.build("meteoric_naquadah_ore","naquadah_ore",blockId++,(block -> new BlockLogicOreNaquadah(block,Materials.STONE)));
 	}
+
+
 }
+

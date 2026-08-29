@@ -25,6 +25,10 @@ repositories {
         patternLayout { artifact("v1/[organisation]/[revision]/[module].jar") }
         metadataSources { artifact() }
     }
+	ivy("https://github.com/Better-than-Adventure") {
+		patternLayout { artifact("[organisation]/releases/download/[revision]/[module]-bta-[revision].jar") }
+		metadataSources { artifact() }
+	}
     maven("https://maven.fabricmc.net/") { name = "Fabric" }
 	maven("https://maven.danygames2014.net/signalum") { name = "SignalumMavenMirror1" }
     maven("https://maven.thesignalumproject.net/infrastructure") { name = "SignalumMavenInfrastructure" }
@@ -36,8 +40,19 @@ dependencies {
 
 	// Required at compilation & runtime
 	// included in builds as a runtime dependency
-	implementation(project.files("bypass/stargate-1.0.0.jar"))
-	implementation(project.files("bypass/cc.jar"))
+	implementation(project.files("mavenBypass/stargate-1.0.0.jar"))
+	implementation(project.files("mavenBypass/cc.jar"))
+	implementation(project.files("mavenBypass/SI.jar"))
+	implementation(project.files("mavenBypass/BTWAILA.jar"))
+	implementation(project.files("mavenBypass/CATALYST-ENRG.jar"))
+	implementation(project.files("mavenBypass/CATALYST-CORE.jar"))
+	implementation("sunsetsatellite:catalyst-effects:3.0.0")
+	implementation("sunsetsatellite:catalyst-fluids:3.0.1")
+	implementation("sunsetsatellite:catalyst-multiblocks:3.0.1")
+	implementation("sunsetsatellite:catalyst-screens:1.0.1")
+	implementation("sunsetsatellite:retrostorage:3.3.2")
+	implementation("sunsetsatellite:vintagequesting:2.0.0-beta.1")
+	implementation("turing:tmb:2.2.3")
 	implementation(libs.loader)
 	implementation(libs.halplibe) // If you do not need halplibe you can delete this line
 

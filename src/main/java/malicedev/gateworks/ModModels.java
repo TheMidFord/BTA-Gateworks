@@ -16,6 +16,10 @@ public class ModModels  {
 			.setTex("gateworks:block/headless_dhd_side", Side.WEST,Side.EAST)
 
 		);
+
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.OreNaquadahMeteoric)
+				.setAllTextures("gateworks:block/naquadah_ore")
+			);
 	}
 
 

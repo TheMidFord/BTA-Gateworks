@@ -1,5 +1,6 @@
 package malicedev.gateworks.recipes.workbench;
 import gungun974.stargate.StargateItems;
+import malicedev.gateworks.Main;
 import malicedev.gateworks.ModBlocks;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
@@ -17,5 +18,9 @@ public class WorkbenchRecipes {
 			.addInput('N', StargateItems.NAQUADAH_CRUDE_ALLOY)
 			.addInput('D',Items.DIAMOND)
 			.create("headless_dhd", new ItemStack(ModBlocks.HeadlessDHD));
+	}
+
+	public static void initNamespaces() {
+		RecipeBuilder.initNameSpace(Main.MOD_ID);
 	}
 }
